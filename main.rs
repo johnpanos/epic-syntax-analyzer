@@ -13,6 +13,7 @@ fn main() {
     let mut chars = input_str.chars().peekable();
 
     let mut lexemes = Vec::<String>::new();
+    let mut tokens = Vec::<String>::new();
     let mut in_progress_lexeme = String::new();
 
     while let Some(c) = chars.peek() {
@@ -26,6 +27,7 @@ fn main() {
                 chars.next();
             }
             lexemes.push(in_progress_lexeme);
+            tokens.push("ITY".to_string());
             in_progress_lexeme = String::new();
         } else if c.is_alphanumeric() {
             while let Some(ch) = chars.peek() {
@@ -37,12 +39,15 @@ fn main() {
                 chars.next();
             }
             lexemes.push(in_progress_lexeme);
+            tokens.push("INT_LIT".to_string());
             in_progress_lexeme = String::new();
         } else {
             lexemes.push(c.to_string());
+            tokens.push(lookup(&c));
             chars.next();
         }
     }
     
     println!("{:?}", lexemes);
+    println!("{:?}", tokens);
 }
