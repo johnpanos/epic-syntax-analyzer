@@ -4,6 +4,7 @@
 | Token | Description |
 |-------|-------------|
 |ITY    |Variable     |
+|ASSIGN |Assignment   |
 |ADD_OP |Addition     |
 |SUB_OP |Subtraction  |
 |MUL_OP |Multiplication|
