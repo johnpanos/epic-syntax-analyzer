@@ -1,5 +1,21 @@
 # Epic Syntax Analyzer
 
+## Getting Started
+
+1. [Download and setup Rust](https://www.rust-lang.org/learn/get-started)
+2. Clone the repository
+```
+$ git clone git@github.com:johnpanos/epic-syntax-analyzer.git
+```
+3. Compile
+```
+$ rustc ./main.rs
+```
+4. Run
+```
+$ ./main
+```
+
 ## Token Table
 | Token | Description |
 |-------|-------------|
